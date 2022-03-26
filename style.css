@@ -5,13 +5,20 @@
     font-family: roboto, sans-serif;
 }
 
+body {
+    background-color: rgb(225, 225, 217);
+    margin-bottom: 10px;
+}
+
 h1 {
     text-align: center;
-    margin: 20px 0;
+    padding: 15px 0;
+    background-color: rgb(111, 98, 233);
+    color: aliceblue;
 }
 
 h3 {
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 .panel {
@@ -21,10 +28,14 @@ h3 {
 .panel-left,
 .panel-right {
     display: inline-block;
-    width: 48%;
+    width: 49%;
     overflow: hidden;
     margin: 40px auto 0;
     text-align: center;
+}
+
+.panel-right {
+    border-left: 8px solid rgb(111, 98, 233);
 }
 
 .panel-left p {
@@ -41,7 +52,7 @@ h3 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .select {
@@ -61,9 +72,9 @@ h2 {
 button {
     display: block;
     padding: 5px 20px;
-    border: 2px solid black;
+    border: 2px solid grey;
     text-transform: uppercase;
-    background-color: #fff;
+    background-color: rgb(228, 228, 228);
     font-weight: bold;
     margin: 10px auto;
     transition: .3s;
@@ -72,8 +83,9 @@ button {
 }
 
 button:hover {
-    background-color: rgb(20, 20, 20);
-    color: white
+    background-color: rgb(100, 88, 88);
+    border-color: rgb(100, 88, 88);
+    color: rgb(230, 228, 228)
 }
 
 span {
