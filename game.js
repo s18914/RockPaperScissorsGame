@@ -10,6 +10,8 @@ const game = {
  aiHand: ""
 }
 
+const panelLeft = document.querySelector('.panel-left');
+
 const hands = [...document.querySelectorAll('.select img')];
 
 const btnStart = document.querySelector('.start');
@@ -24,15 +26,18 @@ function checkResult() {
 
     if (game.playerHand === game.aiHand) {
         gameSummary.draws += 1;
+        panelLeft.style.backgroundColor = 'rgb(183 195 201)';
         document.querySelector('p.draws span').textContent = gameSummary.draws;
         return "Draw!"
     } else if (game.playerHand === "stone" && game.aiHand === "scissors" 
         || game.playerHand === "scissors" && game.aiHand === "paper" 
         || game.playerHand === "paper" && game.aiHand === "stone") {
-        gameSummary.wins += 1;
-        document.querySelector('p.wins span').textContent = gameSummary.wins;
-        return "You win!";
+            panelLeft.style.backgroundColor = 'rgb(167 225 166)';
+            gameSummary.wins += 1;
+            document.querySelector('p.wins span').textContent = gameSummary.wins;
+            return "You win!";
     } else {
+        panelLeft.style.backgroundColor = 'rgb(225 166 166)';
         gameSummary.losses++;
         document.querySelector('p.losses span').textContent = gameSummary.losses;
         return "You loose..."
@@ -60,7 +65,7 @@ function play() {
     game.aiHand = computerChoice();
     document.querySelector('[data-summary="ai-choice"]').textContent = game.aiHand;
     
-    
+
     document.querySelector('[data-summary="who-win"]').textContent = checkResult();
 
     gameSummary.numbers++;

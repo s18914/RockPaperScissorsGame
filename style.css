@@ -28,9 +28,11 @@ h3 {
 .panel-left,
 .panel-right {
     display: inline-block;
-    width: 49%;
+    width: calc(50% - 55px);
     overflow: hidden;
-    margin: 40px auto 0;
+    margin: 20px 25px 0 0;
+    padding: 0 0 20px 0;
+    border-radius: 0 20px 20px 0;
     text-align: center;
 }
 
